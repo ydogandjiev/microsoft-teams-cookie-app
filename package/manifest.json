@@ -1,0 +1,44 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.5",
+    "version": "1.0.0",
+    "id": "cadf8d2c-b02f-4987-ac2c-9199444efd02",
+    "packageName": "net.azurewebsites.teams-cookie-app",
+    "developer": {
+        "name": "Yuri",
+        "websiteUrl": "https://teams-cookie-app.azurewebsites.net",
+        "privacyUrl": "https://teams-cookie-app.azurewebsites.net/privacy",
+        "termsOfUseUrl": "https://teams-cookie-app.azurewebsites.net/termsofuse"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Cookie App",
+        "full": ""
+    },
+    "description": {
+        "short": "An app for testing cookies",
+        "full": "An app for testing upcoming SameSite cookie changes in Chromium"
+    },
+    "accentColor": "#F9F9FA",
+    "staticTabs": [
+        {
+            "entityId": "cookie",
+            "name": "Cookie",
+            "contentUrl": "https://teams-cookie-app.azurewebsites.net/",
+            "websiteUrl": "https://teams-cookie-app.azurewebsites.net/",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "teams-cookie-app.azurewebsites.net"
+    ]
+}
