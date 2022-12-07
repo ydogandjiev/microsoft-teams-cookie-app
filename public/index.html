@@ -3,40 +3,15 @@
 
 <!DOCTYPE html>
 <html>
-  <body onload="getCookies()">
-    <div>Cookies:</div>
-    <p id="cookies"></p>
-    <button onclick="setCookies()">Set Cookies</button>
-    <button onclick="clearCookies()">Clear Cookies</button>
-  </body>
-  <script>
-    function getCookies() {
-      document.getElementById("cookies").innerHTML = document.cookie;
-    }
+  <body>
+    <div>
+      <a href="cookies.html">Cookies</a> | 
+      <a href="samesite-cookies.html">SameSite Cookies</a> | 
+      <a href="partitioned-cookies.html">Partitioned Cookies</a> | 
+      <a href="local-storage.html">LocalStorage</a> | 
+      <a href="index-db.html">IndexDB</a>
+    </div>
     
-    function setCookies() {
-      var xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
-          getCookies();
-        }
-      };
-      xhr.open("GET", "/set");
-      xhr.send();
-    }
-
-    function clearCookies() {
-      var cookies = document.cookie.split(";");
-      for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i];
-        var eqPos = cookie.indexOf("=");
-        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-        document.cookie = name + "=;SameSite=None;Secure;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-        document.cookie = name + "=;SameSite=Non;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-        document.cookie = name + "=;Secure;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-      }
-      getCookies();
-    }
-  </script>
+    <p>Test app for different web standards, click on above links to get started</p>
+  </body>
 </html>
