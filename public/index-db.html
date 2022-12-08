@@ -4,9 +4,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="js/cookies.js"></script>
+    <script src="js/local-storage.js"></script>
   </head>
-  <body onload="getCookies()">
+  <body onload="getAllLocalStorage()">
     <div>
       <a href="cookies.html">Cookies</a> |
       <a href="samesite-cookies.html">SameSite Cookies</a> |
@@ -15,17 +15,15 @@
       <a href="index-db.html">IndexDB</a>
     </div>
 
-    <h2>SameSite Cookies 🍪</h2>
+    <h2>IndexDB 🧳</h2>
 
-    <p>Current Cookies</p>
-    <div style="border: 1px solid gray; padding: 10px">
-      <p id="cookies"></p>
-      <code id="cookieStore" style="white-space: pre; font-size: large"></code>
-    </div>
+    <p>IndexDB contents</p>
+    <p id="indexDB" style="border: 1px solid gray; padding: 10px;"></p>
+
+    <p>
+      Coming soon...
+    </p>
 
     <br />
-    
-    <button onclick="setCookiesFromApi()">Set Cookies from API</button>
-    <button onclick="clearCookies()">Clear Cookies</button>
   </body>
 </html>
