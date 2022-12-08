@@ -14,7 +14,7 @@ function getCookies() {
     });
   }
   
-  function setCookies() {
+  function setCookiesFromApi() {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4) {
@@ -48,6 +48,7 @@ function getCookies() {
       var cookie = cookies[i];
       var eqPos = cookie.indexOf("=");
       var name = eqPos > -1 ? cookie.substring(0, eqPos) : cookie;
+      document.cookie = name + "=;SameSite=None;Secure;Partitioned;expires=Thu, 01 Jan 1970 00:00:00 GMT";
       document.cookie = name + "=;SameSite=None;Secure;expires=Thu, 01 Jan 1970 00:00:00 GMT";
       document.cookie = name + "=;SameSite=Non;expires=Thu, 01 Jan 1970 00:00:00 GMT";
       document.cookie = name + "=;Secure;expires=Thu, 01 Jan 1970 00:00:00 GMT";
