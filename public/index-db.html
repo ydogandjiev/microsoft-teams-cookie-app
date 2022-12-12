@@ -4,9 +4,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="js/local-storage.js"></script>
+    <script src="js/index-db.js"></script>
   </head>
-  <body onload="getAllLocalStorage()">
+  <body onload="initOnLoad()">
     <div>
       <a href="cookies.html">Cookies</a> |
       <a href="samesite-cookies.html">SameSite Cookies</a> |
@@ -21,8 +21,19 @@
     <p id="indexDB" style="border: 1px solid gray; padding: 10px;"></p>
 
     <p>
-      Coming soon...
+      <label for="name">Name</label>
+      <input type="text" id="name" />
     </p>
+
+    <br />
+    <button onclick="addToIndexdb()">Set in store</button>
+    <button onclick="clearIndexdb()">Clear store</button>
+
+    <br />
+    <br />
+
+    <button onclick="initDatabase()">Create DB</button>
+    <button onclick="destroyIndexdb()">Destroy DB</button>
 
     <br />
   </body>
