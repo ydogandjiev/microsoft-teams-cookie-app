@@ -45,7 +45,7 @@ function setCookiesFromClient() {
   const key = document.getElementById("key")?.value;
   const cookieValue = document.getElementById("cookieValue")?.value;
   const secure = document.getElementById("secure")?.checked;
-  const sameSite = document.getElementById("sameSite")?.value;
+  const sameSite = document.getElementById("sameSite")?.value || null;
   const partitioned = document.getElementById("partitioned")?.checked;
 
   let cookie = `${encodeURIComponent(key)}=${encodeURIComponent(
