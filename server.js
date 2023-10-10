@@ -23,6 +23,9 @@ app.get("/cookies/partitioned/set", (req, res) => {
     "__Host-partitioned-lax=DELETE FROM DEVTOOLS; SameSite=Lax; Secure; Path=/; Partitioned",
     "__Host-partitioned-strict=DELETE FROM DEVTOOLS; SameSite=Strict; Secure; Path=/; Partitioned",
     "__Host-not-partitioned=DELETE FROM DEVTOOLS; SameSite=None; Secure; Path=/",
+    "__Host-no-partition-attribute=DELETE FROM DEVTOOLS; SameSite=None; Secure; Path=/;",
+    "__Host-httponly-no-partition-attribute=DELETE FROM DEVTOOLS; SameSite=None; Secure; HttpOnly; Path=/;",
+    "__Host-httpOnly-no-samesite-no-partition=DELETE FROM DEVTOOLS; Secure; HttpOnly; Priority=HIGH; Path=/;"
   ]);
 
   res.end();
