@@ -19,6 +19,10 @@ function getCookies() {
   });
 }
 
+function popOutApp() {
+  window.open("https://teams-cookie-app.azurewebsites.net/partitioned-cookies.html");
+}
+
 function setCookiesFromApi() {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
